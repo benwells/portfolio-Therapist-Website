@@ -1,0 +1,318 @@
+// home-template.jade
+extends home-layout
+
+block head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(name='description', content="Marc Navon, Cognitive Behavioral Therapist. Serving behavioral healthcare needs North of Boston. Treatment: Depression,Anxiety,Bipolar Disorder,Addiction ,ADHD,Marriage issues,Career Problems")
+  meta(name='author', content='Marc Navon, Cognitive Behavioral Therapist in Boston, Massachusetts')
+  meta(name='title', content='Marc Navon, Cognitive Behavioral Therapist in Boston, Massachusetts')
+  meta(name="keywords" content="Cognitive Behavioral Therapy,North Shore,Boston,CBT,Therapy,Psychotherapy,Marblehead,Massachusetts,MA,Addiction,Counseling,Alcoholism,Geriatric,Danvers")
+  link(href='/css/bootstrap.min.css', rel='stylesheet')
+  link(href='/css/styles.css', rel='stylesheet')
+  link(href='/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+  link(href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600', rel='stylesheet', type='text/css')
+  link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic', rel='stylesheet', type='text/css')
+
+  //if lt IE 9
+  <!--[if lt IE 9]>
+  <script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>
+  <script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>
+  <![endif]-->
+  
+  script.
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-70777087-1', 'auto');
+    ga('send', 'pageview');
+
+block nav
+  // Navigation
+  nav.navbar.navbar-default.topnav(role='navigation')
+    .container.topnav
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand.topnav(href='/home')
+          img.brand(src='img/logo.png', alt='Navon Therapy')
+      // Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul#navlist.nav.navbar-nav.navbar-right
+          li
+            a(href='#biography') Biography
+          li
+            a(href='#credentials') Credentials
+          li
+            a(href='#contact') Contact
+      ul#hours.nav.navbar-nav.navbar-right
+        li
+          a(href='#')
+            table
+              tr
+                td.col1
+                  i.fa.fa-phone-square
+                td.col2
+                  | (781) 990-1035
+              tr
+                td.col1 
+                td.col2 Mon - Fri
+              tr
+                td.col1 
+                td.col2 7:00am - 6:00pm
+
+block titlepane
+  <!-- Header -->
+  a(name='about')
+  .intro-header
+    .container
+      .row
+        .col-lg-12
+          .intro-message
+            .col-lg-6.col-md-12.col-sm-12
+              img#intro-img.img-rounded.img-responsive(src='img/marc.jpg', alt='Marc Navon Behavioral Cognitive Therapist')
+            .col-lg-6.col-sm-12
+              #name-title
+                p Marc Navon
+                span#creds , MSW, LICSW, MPH
+              h1(style="font-size:32px;")
+                i Cognitive Behavioral Therapist
+              //- h2
+              hr.intro-divider
+              h3#introtagline
+                i
+                  | &ldquo;Serving the behavioral healthcare needs of individuals and families on
+                  | Boston&apos;s North Shore.&rdquo;
+
+
+block healthcare
+  .content-section-b
+    .container
+      #healthcare.row
+        .col-lg-5.col-sm-6
+          hr.section-heading-spacer
+          .clearfix
+          h2.section-heading “What is Cognitive Behavioral Therapy?”
+          p.lead
+            | Marc is a seasoned clinician who uses Cognitive Behavioral Therapy (CBT) in his work
+            | with clients. CBT focuses on exploring relationships among a person's thoughts, 
+            | feelings and behaviors. During CBT Marc actively works with clients to uncover 
+            | unhealthy patterns of thought and how they may be causing self-destructive behaviors 
+            | and beliefs. 
+            br
+            br
+            | By addressing these patterns, the client and Marc work together to develop 
+            | constructive ways of thinking that will produce healthier behaviors and beliefs. For 
+            | instance, CBT can help clients replace thoughts that lead to low self-esteem ("I can't do 
+            | anything right") with positive expectations ("I can do this most of the time, based on my 
+            | prior experiences"). 
+        .col-lg-5.col-lg-offset-2.col-sm-6
+          p.lead#rightbio
+            | The core principles of CBT are identifying negative or false beliefs 
+            | and testing or restructuring them. Oftentimes clients being treated with CBT will have 
+            | homework in between sessions where they practice replacing negative thoughts with 
+            | more realistic thoughts based on prior experiences or record their negative thoughts in a 
+            | journal.
+            br
+            br
+            | Studies of CBT have shown it to be an effective treatment for a wide variety of mental 
+            | illnesses, including depression, anxiety disorders, bipolar disorder, eating disorders and 
+            | schizophrenia. Individuals who undergo CBT show changes in brain activity, suggesting 
+            | that this therapy actually improves your brain functioning as well. Cognitive Behavioral 
+            | Therapy has a considerable amount of scientific data supporting its use. 
+            br
+            br
+            i Source: 
+              a(href="https://www.nami.org/Learn-More/Treatment/Psychotherapy") NAMI
+              
+block mission
+  .content-section-a
+    .container
+      #biography.row
+        .col-lg-5.col-sm-6
+          img.img.img-responsive(src='img/tree.png')
+          hr.section-heading-spacer
+          .clearfix
+          h2.section-heading Biography
+          p.lead
+            | Marc Navon earned his bachelor’s degree in Psychology at the University of Massachusetts, Amherst. He holds two master’s degrees in Social Work from Simmons College in Boston, and in Public health from the University of Massachusetts, Amherst.
+          p.lead
+            | Marc began his clinical career at the North Shore Children’s Hospital in Salem, MA working with children and families in psychiatric inpatient and outpatient settings and on the medical floors.
+        .col-lg-5.col-lg-offset-2.col-sm-6
+          p.lead#rightbio
+            | He has also held positions as Director of Social Work and Outpatient Departments at Mt. Pleasant Hospital, a substance abuse treatment facility formally in Lynn, MA; Director of Utilization Management at the Massachusetts Department of Mental Health; Operations Manager of the Behavioral Health Program at Neighborhood Health Plan in Boston; and Managing Director of the Center for health Policy and Research at the UMass Medical School in Worcester, MA. Marc has been in private practice since 1986 serving clients of all ages for a variety of behavioral health issues.
+            img#water-img.img-responsive(src='img/water.jpg', alt='')
+      //- .row
+      //-   .col-lg-5.col-lg-offset-1.col-sm-push-6.col-sm-6
+      //-     hr.section-heading-spacer
+      //-     .clearfix
+      //-     h2.section-heading Michele Navon, MSW, LICSW
+      //-   .col-lg-5.col-sm-pull-6.col-sm-6
+      //-     hr.section-heading-spacer
+      //-     .clearfix
+      //-     h2.section-heading Marc Navon, MSW, LICSW, MPH
+
+block services
+  #credentials.content-section-b
+      .container
+          .row
+            .col-lg-5.col-lg-offset-1.col-sm-push-6.col-sm-6
+            .col-lg-5.col-sm-pull-6.col-sm-6
+              hr.section-heading-spacer
+              .clearfix
+              h2.section-heading Credentials
+          .row
+            .col-lg-5.col-lg-offset-1.col-sm-push-6.col-sm-6
+              .clearfix
+              h3
+                i.fa.fa-certificate.icon-4
+                |       Licensure/Certification
+              p.lead
+                .panel.panel-default(style="font-size:130%")
+                  .panel-heading Licensed Independent Clinical Social Worker (LICSW), Mass. License #: 105701
+                  .panel-body Child Assessment of Needs and Strengths (CANS) Certificate #: 00b1c29a-ca44-4cf5-a970-8719a5b766a4
+                  .panel-footer NPI #: 13169212306
+            .col-lg-5.col-sm-pull-6.col-sm-6
+              .clearfix
+              h3
+                i.fa.fa-institution
+                |  Education
+              p.lead(style="text-align:center;margin-top:65px;")
+                b UNIVERSITY OF MASSACHUSETTS, Amherst, MA
+                br
+                i  Master of Public Health, May 2010
+                br
+                br
+                b  SIMMONS COLLEGE, Boston, MA
+                br
+                i  Master of Social Work May 1981
+                br
+                br
+                b  UNIVERSITY OF MASSACHUSETTS, Amherst, MA
+                br
+                i  Master of Public Health
+                br
+                i  B. A. in Psychology, Cum Laude May 1977
+              
+
+          .row
+            .col-lg-5.col-lg-offset-1.col-sm-push-6.col-sm-6
+              .clearfix
+              h3
+                i.fa.fa-medkit
+                |  Treatment Expertise
+              p.lead
+                | Marc has expertise treating people of all ages with a wide range of difficulties, including:
+                ul(style="font-size:120%")
+                  li Depression
+                  li Anxiety
+                  li Bipolar Disorder
+                  li Addictions (Alcohol, Opiates and other substances)
+                  li Attention Deficit Disorder
+                  li Marital and Family Problems
+                  li Career Challenges
+                  li Other Psychiatric Difficulties
+            .col-lg-5.col-sm-pull-6.col-sm-6
+              .clearfix
+              h3 
+                i.fa.fa-file-pdf-o
+                |    Resume
+              p.lead 
+                a(href="/docs/Marc-Navon-Clinical-Resume.pdf", target="_blank") Click Here to View Marc's Resume
+
+
+block healthplans
+  .content-section-a
+      .container
+          .row
+            .col-lg-5.col-sm-6
+              img.img.img-responsive(src='img/tree.png')
+              hr.section-heading-spacer
+              .clearfix
+              h2.section-heading Insurances Accepted
+              p.lead
+                span.badge BC/BS
+                span.badge Beacon Health Options
+                span.badge Boston Medical Center/HealthNet
+                span.badge Harvard Pilgrim Health Plan
+                span.badge Medicaid
+                span.badge Medicare
+                span.badge MassHealth
+                span.badge Mass Behavioral Health Partnership
+                span.badge Network Health
+                span.badge TriCare
+                span.badge Tufts Health Plan
+                span.badge UniCare
+                span.badge United Behavioral Health
+                span.badge United Healthcare
+                span.badge Value Options
+                span.badge Neighborhood Health Plan and Fallon
+            .col-lg-5.col-lg-offset-2.col-sm-6
+              img.img-responsive(src='img/pebbles.jpg', alt='', style='margin-top:40px;')
+
+block contact
+  .banner
+      .container
+          #contact.row
+            .col-lg-5
+              h2 Contact Us:
+            .col-lg-3
+              address.address
+                strong
+                  i.fa.fa-map-marker
+                  |  Libery Tree Park
+                br
+                |85 Constitution Lane
+                br
+                | Suite 200C
+                br
+                | Danvers, MA   01923
+                br
+                abbr(title='Phone')
+                  i.fa.fa-phone
+                | (781) 990-1035
+                br
+                abbr(title='Phone') Fax:
+                |  (978) 750-3606
+            .col-lg-3
+              address.address
+                strong
+                  i.fa.fa-map-marker
+                  |  8 Jackson Road
+                br
+                | Marblehead, MA   01945
+                br
+                abbr(title='Phone')
+                  i.fa.fa-phone
+                |  (781) 990-1035
+                br
+                br
+                i.fa.fa-inbox
+                a(href='mailto:mnavon@comcast.net') mnavon@comcast.net
+
+block footer
+  footer
+      .container
+          .row
+            .col-lg-12
+              ul.list-inline
+                li
+                  a(href='#') Home
+                li.footer-menu-divider &sdot;
+                li
+                  a(href='#biography') Biography
+                li.footer-menu-divider &sdot;
+                li
+                  a(href='#credentials') Credentials
+                li.footer-menu-divider &sdot;
+                li
+                  a(href='#contact') Contact
+              p.copyright.text-muted.small Copyright &copy; 2015 by Marc Navon, MSW, LICSW, MPH
+      script(src='https://code.jquery.com/jquery-1.11.3.min.js')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')

@@ -13,7 +13,7 @@ straightforward single page app powered by Express
 
 ## What's Next for this project?
 
- - Custom CMS
+ - Custom Admin CMS with MongoDB and Passport authentication
 
     Currently all of the content is hard coded into the jade blocks.  The goal
     is to allow the client to be fully self sufficient and manage his own content.

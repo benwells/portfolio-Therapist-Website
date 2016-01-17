@@ -24,12 +24,6 @@ app.use(express.static('public'));
 //require routes file
 require('./app/routes')(app);
 
-// app.use(function(req, res) {
-//   // Use res.sendfile, as it streams instead of reading the file into memory.
-//   res.sendfile(__dirname + '/index.html');
-// });
-
-// app.use(app.router);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -67,6 +61,3 @@ var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 app.listen(server_port, server_ip_address, function () {
   console.log( "Listening on " + server_ip_address + ", server_port " + server_port );
 });
-
-// app.listen(server_port);
-// console.log("starting server on port", server_port);
